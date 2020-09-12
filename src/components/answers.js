@@ -3,7 +3,7 @@ import { Text, View, TouchableOpacity } from 'react-native';
 import styles from '../styles/QuizScreenStyle';
 import CountDown from 'react-native-countdown-component';
 
-const AnswerComponent = ({ options, qno, setQno, len, correctAns, setScore, score, nextQuestion, xyz }) => {
+const AnswerComponent = ({ options, qno, len, correctAns, setScore, score, nextQuestion, clr }) => {
     const [dis, setDis] = useState(false)
     const [selectedKey, setSelectedKey] = useState('');
 
@@ -25,11 +25,10 @@ const AnswerComponent = ({ options, qno, setQno, len, correctAns, setScore, scor
     }
 
     const call = () => {
-        console.log('Calling')
         setDis(false)
         setSelectedKey('')
         nextQuestion() 
-        clearTimeout(xyz);
+        clearTimeout(clr);
     }
 
 
