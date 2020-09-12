@@ -1,4 +1,4 @@
-import React, { useState, useRef , useEffect} from 'react';
+import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import quizQuestions from '../json/quizQuestions';
 import QuestionComponent from './questions';
